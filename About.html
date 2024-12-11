@@ -1,0 +1,186 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial scale=1">
+	<title>About</title>
+	<style type= "text/css">
+	body {
+		margin: 0px;
+		padding:0px;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		background:  linear-gradient(to right, #050939, #171453, #050321);
+		background-height: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative;
+		overflow-x: hidden;
+		overflow-y: hidden;
+	}
+	nav{
+		display: flex; 
+		align-items:center; 
+		justify-content:space-between;
+	        top:22px;
+                padding: 15 rem;
+		position:absolute;
+		width: 100%;	
+	}
+	.logo a{
+		font-family: Arial black, sans-serif;
+		font-size:28px; 
+		font-weight:600; 
+		color:#9b59b6;
+		text-decoration: none;
+		margin-left: 20px;
+		padding: 10px 20px;
+		border: 2px solid #9b59b6;
+		border-radius: 8px;
+		box-shadow: 0 0 15px 5px rgba(155, 85, 182, 0.8);
+		
+	}
+	ul{
+		margin:0px;
+		padding:0px;
+		display:flex;
+	}
+	li {
+		list-style:none; 
+		margin-right:25px;
+	}
+	li a {
+		color: white; 
+		font-size:18px; 
+		font-weight:bold; 
+		text-decoration:none;
+		padding: 5px 10px;
+		border: 1px solid #9b59b6;
+		border-radius: 10px;
+		box-shadow: 0 0 15px 5px rgba(155, 85, 182, 0.8);
+	}
+	button{
+		background-color:grey; 
+		margin-left:10px; 
+		border-radius:30 px; 
+		padding:10px; 
+		width:90px;
+		border:none;
+		cursor:pointer;
+	}
+	button a{
+		color: white; 
+		font-weight:bold; 
+		font-size:15px;
+	}
+        li a:hover {
+                background-color: #6a0dad;
+	        transform: scale(1.1);
+	}	
+	#clock {
+		font-size: 18px;
+		color: white;
+		font-weight: bold;
+		margin-top: 10px;
+		margin-right: 500px;
+		padding: 10px 20px;
+		border: 2px solid #9d9d9d;
+		border-radius: 10px;
+		box-shadow: 0 0 15px 5px rgba(155, 85, 182, 0.8);
+		background: black;
+	}
+	.content {
+    		text-align: center;
+    		margin-top: 215px; 
+		color: white;
+		font-size: 18px;
+	}
+
+	.content h1, .content h2, .content p {
+    		margin: 0;
+    		padding: 0;
+	}
+	.content h1 {
+    		margin-bottom: 10px;
+		color: balck; 
+		padding-left: 20%;
+	}
+	.content h2 {
+    		margin-bottom: 20px; 
+		padding-left:20%;
+	}
+	.content p {
+    		text-align: justify;
+		padding-left: 22%;
+		line-height: 1.5;
+		font-size: 18px;
+	}
+	.content p2 {
+		text-align: center;
+		font-size: 23px;
+		line-height: 2.0;
+		padding-left: 25%;
+		color: #AA9DC5;
+	}
+	.content p3 {
+		text-align: center;
+		font-size: 23px;
+		line-height: 1.2;
+		padding-left: 25%;
+		color: #AA9DC5;
+	}
+	
+	</style>
+
+</head>
+
+<body>
+	<nav class="navbar">
+		<div class="logo"><a>WELCOME</a></div>
+		
+		<div id="clock"></div>
+		
+	<ul>
+		<li><a href="Home.html">Home</a></li>
+		<li><a href="About.html">About</a></li>
+		<li><a href="Profile.html">Profile</a></li>
+		<li><a href="Gallery.html">Gallery</a></li>
+		<li><a href="Contact.html">Contact</a></li>
+	</ul
+		
+	</div>	
+	</nav>
+	
+	
+		<img src="profile.png" style="width:270;height:280;bottom: 250px;
+	    	left: 13%; margin-right:20px; position: absolute;">
+		
+		<div class="content">
+			<h1>Hello!!!</h1>
+			<h2>Meet your new friend, I'm Nisa</h2>			
+			<p>As a final semester student Faculty of Information Management, UiTM Segamat.<br>I believe that dreaming big and overcoming challenges are 						essential for success.</br>Every obstacle I face is an opportunity to learn, and each effort I make is a step toward building a better future.</p>
+			<p2> <i>"The journey of a thousand miles begins with a single step."</p2>
+			<p3> - Lao Tzu<i></p3>
+
+		</div>
+    
+	<script>
+		function updateClock() {
+		var now = new Date();
+		var hours = now.getHours().toString().padStart(2, '0');
+		var minutes = now.getMinutes().toString().padStart(2, '0');
+		var seconds = now.getSeconds().toString().padStart(2, '0');
+		var date = now.toLocaleDateString();
+		var time = hours + ":" + minutes + ":" + seconds;
+		document.getElementById("clock").innerHTML = date + " " + time;
+		}
+		setInterval(updateClock, 1000);
+		updateClock();
+	</script>
+
+
+
+</body>
+</head
+</html>

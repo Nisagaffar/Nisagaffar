@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Contact</title>
+	<style>
+	html, body {
+  		height: 100%;
+ 		margin: 0;
+ 		padding: 0;
+	}	
+	body {
+       	        flex-direction: column;
+    		justify-content: center;
+    		align-items: center; 
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		background-image: url("motor.png");
+		background-color:#050939;
+		background-height: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative;
+		overflow-x: hidden;
+		overflow-y: hidden;
+	}
+	nav{
+		display: flex; 
+		align-items:center; 
+		justify-content:space-between;
+	        top:22px;
+                padding: 15 rem;
+		position:absolute;
+		width: 100%;	
+	}
+	.logo a{
+		font-family: Arial black, sans-serif;
+		font-size:28px; 
+		font-weight:600; 
+		color:#9b59b6;
+		text-decoration: none;
+		margin-left: 20px;
+		padding: 10px 20px;
+		border: 2px solid #9b59b6;
+		border-radius: 8px;
+		box-shadow: 0 0 15px 5px rgba(155, 85, 182, 0.8);
+		
+	}
+	ul.navbar{
+		margin:0px;
+		padding:0px;
+		display:flex;
+	}
+	ul.navbar li {
+		list-style:none; 
+		margin-right:25px;
+	}
+	ul.navbar li a {
+		color: white; 
+		font-size:18px; 
+		font-weight:bold; 
+		text-decoration:none;
+		padding: 5px 10px;
+		border: 1px solid #9b59b6;
+		border-radius: 10px;
+		box-shadow: 0 0 15px 5px rgba(155, 85, 182, 0.8);
+	}
+	button{
+		background-color:grey; 
+		margin-left:10px; 
+		border-radius:30 px; 
+		padding:10px; 
+		width:90px;
+		border:none;
+		cursor:pointer;
+	}
+	button a{
+		color: white;
+		font-weight:bold; 
+		font-size:15px;
+	}
+        ul.navbar li a:hover {
+                background-color: #6a0dad;
+	        transform: scale(1.1);
+        }
+	#clock {
+		font-size: 18px;
+		color: white;
+		font-weight: bold;
+		margin-top: 10px;
+		margin-right: 500px;
+		padding: 10px 20px;
+		border: 2px solid #9d9d9d;
+		border-radius: 10px;
+		box-shadow: 0 0 15px 5px rgba(155, 85, 182, 0.8);
+		background: black;
+	}
+	a img {
+      		width: 100px;
+      		height: 100px;
+      		object-fit: cover;
+      		transition: transform 0.3s ease-in-out;
+      		border-radius: 20px;
+      		box-shadow: 0 0 15px 5px rgba(155, 85, 182, 0.8); 
+    	}
+    	a img:hover {
+      		transform: scale(1.2);
+    	}
+    	ul.social {
+     		margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 20px;
+    	}
+    	ul.social li {
+                list-style: none;
+      
+        }
+     	ul.social li a {
+               display: block;
+               width: 150px;
+               height: 150px;
+               transition: transform 0.3s ease;
+        }
+    	ul.social li a:hover img {
+                transform: translate (0, -10);
+	}
+	h1 {
+		color: white;
+		margin-bottom: 50px;
+		color: white; 
+		font-size:18px; 
+		font-weight:bold;
+		text-align: center;
+
+		}
+	</style>
+
+</head>
+<body>	
+		<nav class="navbar">
+		<div class="logo"><a>WELCOME</a></div>
+		<div id="clock"></div>
+
+			
+	<ul class="navbar">
+		<li><a href="Home.html">Home</a></li>
+		<li><a href="About.html">About</a></li>
+		<li><a href="Profile.html">Profile</a></li>
+		<li><a href="Gallery.html">Gallery</a></li>
+		<li><a href="Contact.html">Contact</a></li>
+	</ul
+	
+	</div>	
+	</nav> 
+	
+	<h1>Feel free to reach out to me <br> It would be my pleasure to connect!!!</h1>
+	<ul class= "social">
+ 		<li><a href="https://www.facebook.com/" target="_blank">
+   		<img src="fb.png" style= background:#0d539d;>
+  		</a><br></li>
+  		<li><a href="https://www.instagram.com/hanisahgaffar" target="_blank">
+    		<img src="ig.jpg">
+  		</a><br></li>
+  		<li><a href="https://www.tiktok.com/" target="_blank">
+    		<img src="tiktok.png" style= background:black; >
+  		</a><br></li>
+  		<li><a href="mailto:hanisahgaffar@gmail.com" target="_blank">
+   		<img src="mail.png" style= background:#d32d2a;>
+  		</a><br></li>
+  	</ul>
+</body>
+	<script>
+		function updateClock() {
+		var now = new Date();
+		var hours = now.getHours().toString().padStart(2, '0');
+		var minutes = now.getMinutes().toString().padStart(2, '0');
+		var seconds = now.getSeconds().toString().padStart(2, '0');
+		var date = now.toLocaleDateString();
+		var time = hours + ":" + minutes + ":" + seconds;
+		document.getElementById("clock").innerHTML = date + " " + time;
+		}
+		setInterval(updateClock, 1000);
+		updateClock();
+	</script>
+
+  
+ 	
+</html>
+
+		
+	
+</body>
+</head
+</html>

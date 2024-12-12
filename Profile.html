@@ -1,0 +1,351 @@
+<html> 
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Profile</title>
+	<style type="text/css">
+	body {
+		margin: 0px;
+		padding: 0px;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		background: linear-gradient(to right, #050939, #171453, #050321);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative;
+		overflow-x: hidden;
+		overflow-y: hidden;
+	}
+	nav{
+		display: flex; 
+		align-items:center; 
+		justify-content:space-between;
+	        top:22px;
+                padding: 15 rem;
+		position:absolute;
+		width: 100%;	
+	}
+	.logo a{
+		font-family: Arial black, sans-serif;
+		font-size:28px; 
+		font-weight:600; 
+		color:#9b59b6;
+		text-decoration: none;
+		margin-left: 20px;
+		padding: 10px 20px;
+		border: 2px solid #9b59b6;
+		border-radius: 8px;
+		box-shadow: 0 0 15px 5px rgba(155, 85, 182, 0.8);
+	}
+	ul.navbar-list {
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+    }
+
+    li.navbar-item {
+        list-style: none; 
+        margin-right: 25px;
+    }
+
+    li.navbar-item a {
+        color: white; 
+        font-size: 18px; 
+        font-weight: bold; 
+        text-decoration: none;
+        padding: 5px 10px;
+        border: 1px solid #9b59b6;
+        border-radius: 10px;
+        box-shadow: 0 0 15px 5px rgba(155, 85, 182, 0.8);
+    }
+
+    li.navbar-item a:hover {
+        background-color: #6a0dad;
+        transform: scale(1.1);
+    
+	}
+	#clock {
+		font-size: 18px;
+		color: white;
+		font-weight: bold;
+		margin-top: 10px;
+		margin-right: 500px;
+		padding: 10px 20px;
+		border: 2px solid #9d9d9d;
+		border-radius: 10px;
+		box-shadow: 0 0 15px 5px rgba(155, 85, 182, 0.8);
+		background: black;
+	}
+
+	.container {
+		width: 80%;
+		margin: 100px auto;
+		padding: 20px;
+		background-color: black;
+		color: white;
+		border-radius: 25px;
+		font-family: 'Arial', sans-serif;
+		font-size: 18px;
+		font-weight: bold;
+		box-shadow: 0 0 18px 5px rgba(155, 85, 182, 0.8);
+		overflow-y: scroll;
+		max-height: 80vh;
+	}
+
+	table {
+		width: 100%;
+		margin-bottom: 30px;
+		border-collapse: 2px collapse;
+	}
+
+	th, td {
+		padding: 12px;
+		border: 1px solid #ddd;
+		text-align: left;
+		color: white;
+	}
+
+	th {
+		background-color: #9b59b6;
+	}
+
+	tr:nth-child(even) {
+		background-color: #171453;
+	}
+
+	tr:hover {
+		background-color: #e0e0e0;
+	}
+
+	caption {
+		font-size: 1.5em;
+		margin-bottom: 10px;
+		text-align: left;
+		font-weight: bold;
+		color: white;
+	}
+
+	h1 {
+		text-align: center;
+		margin-bottom: 30px;
+		color: white;
+	}
+	.container ol {
+       		 list-style-type: upper-roman;
+       		 margin-left: 20px;
+       		 list-style-position: inside;
+    	}
+
+    	.container ul {
+        	list-style-type: disc;
+        	margin-left: 20px;
+        	list-style-position: inside;
+    	}
+
+    	.container li {
+      		margin-bottom: 5px;
+	}
+	 .bookmarks {
+            	margin-bottom: 30px;
+    		justify-content: center;
+    		align-items: center;
+		display: flex;
+	        padding: 10px;
+  		gap:5px;
+        }
+
+        .bookmarks a {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            background: #6a0dad;
+            border: 2px solid #9b59b6;
+            border-radius: 10px;
+            box-shadow: 0 0 15px 5px rgba(155, 85, 182, 0.8);
+        }
+
+        .bookmarks a:hover {
+            background: #9b59b6;
+            transform: scale(1.1);
+        }
+	</style>
+</head>
+<body>
+	<nav class="navbar">
+	<div class="logo"><a>WELCOME</a></div>
+	<div id="clock"></div>
+	<ul class="navbar-list">
+            <li class="navbar-item"><a href="Home.html">Home</a></li>
+            <li class="navbar-item"><a href="About.html">About</a></li>
+            <li class="navbar-item"><a href="Profile.html">Profile</a></li>
+            <li class="navbar-item"><a href="Gallery.html">Gallery</a></li>
+            <li class="navbar-item"><a href="Contact.html">Contact</a></li>
+        </ul>
+	</nav>
+
+	<div class="container">
+		 <div class="bookmarks">
+            		<a href="#biodata">Biodata</a>
+            		<a href="#skills">Skills</a>
+            		<a href="#education">Education</a>
+            		<a href="#work">Work Experience</a>
+            		<a href="#hobbies">Hobbies</a>
+           		<a href="#favourites">Favourites</a>
+	</div>
+
+        <h1>About Me</h1>
+
+        <table id="biodata">
+            <caption>Biodata</caption>
+         
+            <tr>
+                <td>Name</td>
+                <td>Nurul Hanisah binti Abd Gaffar</td>
+            </tr>
+	    
+	    <tr>	
+                <td>Birth of date</td>
+                <td>01/01/2005</td>
+            </tr>
+
+            <tr>
+                <td>Age</td>
+                <td>19 Years Old</td>
+            </tr>
+            <tr>
+                <td>State</td>
+                <td>Kluang, Johor</td>
+            </tr>
+            
+            <tr>
+                <td>Siblings</td>
+                <td>5</td>
+            </tr>
+	    
+	    <tr>
+                <td>Email</td>
+                <td>hanisahgaffar@gmail.com</td>
+            </tr>
+           
+	    <tr>
+                <td>Profession</td>
+                <td>Student</td>
+            </tr>
+           
+	    <tr>
+                <td>Student ID</td>
+                <td>2022448834</td>
+            </tr>
+        </table>
+
+        <table id="skills">
+            <caption>Skills</caption>
+            <tr>
+                <td>Canva</td>
+                <td>Microsoft Word</td>
+                <td>Microsoft Powerpoint</td>
+           </tr> 
+        </table>
+
+        <table id="education">
+            <caption>Education</caption>
+            <tr>
+                <th>Institution</th>
+		<th>Year</th>
+                <th>Qualification</th>
+
+            </tr>
+	    <tr>
+		<td rowspan="3"> Sekolah Agama Bandar Paloh </td>
+	        <td>2011-2014</td>
+        	<td>Ujian Pentaksiran Kelas KAFA (UPKK) </td>
+    	    </tr>
+ 	    <tr>
+ 	        <td>2015-2016</td>
+        	<td>Sijil Darjah Enam Agama (SDEA) </td>
+    	    </tr>
+ 	    <tr>
+		<td>2017-2018</td>
+        	<td>Sijil Darjah Khas Agama (SDKA) </td>
+	    </tr>
+            <tr>
+                <td>Sekolah Kebangsaan Paloh 2</td>
+                <td>2011 -2016</td>
+                <td>Ujian Pendidikan Sekolah Rendah (UPSR)</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Sekolah Menengah Kebangsaan Paloh</td>
+                <td>2017 - 2019</td>
+                <td>Peperiksaan Tingkatan 3 (PT3)</td>
+            </tr>
+	    <tr>
+        	<td>2020 - 2021</td>
+        	<td>Sijil Peperiksaan Malaysia (SPM)</td> 
+	    </tr>
+
+            <tr>
+                <td>Universiti Teknologi Mara Segamat</td>
+                <td>2023-2025</td>
+                <td>Diploma of Information Management</td>
+            </tr>
+        </table>
+
+        <table id="work">
+            <caption>Work Experience</caption>
+            <tr>
+                <th>Position</th>
+                <th>Organization</th>
+            </tr>
+            <tr>
+                <td>Internship</td>
+                <td>Majlis Perbandaran Kluang</td>
+            </tr>
+	
+	<table id="hobbies">
+            <caption>Hobbies</caption>
+            <tr>
+                <td>Travel</td>
+                <td>Food-hunting</td>
+		<td>Photography</td>
+            </tr>
+
+        </table>
+	
+	<p id="food">My Favourite <mark> <sub> Food </sub>:</p>
+	<ol type="I" style="list-style-type: upper-roman; margin-left: 20px;list-style-position: inside;">  
+		<li> Fried Chicken</li>
+		<li> Kunafa</li>
+		<li> Fried Rice </li>
+
+	</ol>
+
+	<p id="drink">My Favourite <mark> <sup>Drinks</sup> :</p>
+	<ul style="display: block; margin-left: 20px;list-style-position: inside;">
+		<li> Ice Lemon</li>
+		<li> Ice Lemon Tea</li>
+ 		<li> Milk Tea</li>
+	</ul>
+
+
+	</div>
+
+	<script>
+		function updateClock() {
+			var now = new Date();
+			var hours = now.getHours().toString().padStart(2, '0');
+			var minutes = now.getMinutes().toString().padStart(2, '0');
+			var seconds = now.getSeconds().toString().padStart(2, '0');
+			var date = now.toLocaleDateString();
+			var time = hours + ":" + minutes + ":" + seconds;
+			document.getElementById("clock").innerHTML = date + " " + time;
+		}
+		setInterval(updateClock, 1000);
+		updateClock();
+	</script>
+
+</body>
+</html>

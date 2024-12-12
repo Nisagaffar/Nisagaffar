@@ -1,0 +1,146 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gallery</title>
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to right, #050939, #171453, #050321);
+            background-size: cover;
+	    overflow: hidden;
+        }
+        nav {
+            display: flex; 
+	    align-items:center; 
+	    justify-content:space-between;
+	    top:22px;
+            padding: 15 rem;
+	    position:absolute;
+            width: 100%;
+        }
+        .logo a {
+            font-family: Arial black, sans-serif;
+	    font-size:28px; 
+	    font-weight:600; 
+	    color:#9b59b6;
+	    text-decoration: none;
+	    margin-left: 20px;
+	    padding: 10px 20px;
+	    border: 2px solid #9b59b6;
+	    border-radius: 8px;
+	    box-shadow: 0 0 15px 5px rgba(155, 85, 182, 0.8);
+
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        li {
+            list-style: none;
+            margin-right: 25px;
+        }
+        li a {
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 1px solid #9b59b6;
+            border-radius: 10px;
+	    box-shadow: 0 0 15px 5px rgba(155, 85, 182, 0.8);
+        }
+        li a:hover {
+            background-color: #6a0dad;
+            transform: scale(1.1);
+        }
+        #clock {
+	    font-size: 18px;
+	    color: white;
+	    font-weight: bold;
+	    margin-top: 10px;
+	    margin-right: 500px;
+	    padding: 10px 20px;
+	    border: 2px solid #9d9d9d;
+	    border-radius: 10px;
+	    box-shadow: 0 0 15px 5px rgba(155, 85, 182, 0.8);
+	    background: black;
+        }
+        .gallery {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .gallery img, .gallery video {
+            width: 100px;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover, .gallery video:hover {
+            transform: translateY(-10px);
+        }
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 450px;
+            font-size: 20px;
+            font-weight: bold;  
+	}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><a>WELCOME</a></div>
+        <div id="clock"></div>
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Profile.html">Profile</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <h1><i>"And those moments will become memories..."</i></h1>
+    <div class="gallery">
+        <img src="img1.jpg" alt="Image 1">
+        <img src="img2.jpg" alt="Image 2">
+        <img src="img3.jpg" alt="Image 3">
+        <img src="img4.jpg" alt="Image 4">
+        <img src="img5.jpg" alt="Image 5">
+	<img src="img6.jpg" alt="Image 6">
+ 
+	<video src="video1.mp4" controls></video>
+	<video src="video3.mp4" controls></video>
+	<video src="video5.mp4" controls></video>
+    </div>
+    
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            const date = now.toLocaleDateString();
+            document.getElementById("clock").textContent = `${date} ${hours}:${minutes}:${seconds}`;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+</html>
